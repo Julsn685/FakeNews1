@@ -4,20 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine interaktive Lernumgebung</title>
+    <style>
+        /* Sicherstellen, dass der iframe den ganzen Bildschirm nutzt */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hauptcontainer für den Inhalt */
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* iframe passt sich automatisch an den Bildschirm an */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Verbergen des H1-Titels auf mobilen Geräten */
+        @media (max-width: 768px) {
+            h1 {
+                display: none; /* Ausblenden auf mobilen Geräten */
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Willkommen zu meiner interaktiven Lernumgebung!</h1>
 
-    <!-- H5P Embed Code -->
-    <iframe src="https://digitalemedien.h5p.com/content/1292432738081206647/embed" 
-            aria-label="Fake News" 
-            width="1088" 
-            height="637" 
-            frameborder="0" 
-            allowfullscreen="allowfullscreen" 
-            allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *">
-    </iframe>
-    <script src="https://digitalemedien.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
-
-</body>
-</html>
+    <div class="container">
+        <!-- H5P Embed Code -->
+        <iframe src="https://digitalemedien.h5p.com/content/129
